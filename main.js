@@ -1,10 +1,12 @@
 var nose_x = 0;
 var nose_y = 0;
 var img = "";
+var hat="";
 
 function preLoad() {
 
-   // img = loadImage("https://i.postimg.cc/7ZBcjDqp/clownnose.png");
+    img = loadImage("https://i.postimg.cc/7ZBcjDqp/clownnose.png");
+    hat = loadImage("https://i.postimg.cc/MKLGyz0R/hat.jpg");
 }
 
 function setup() {
@@ -24,9 +26,11 @@ function modelLoaded() {
 
 function draw() {
     image(video, 0, 0, 300, 300);
-    fill("red");
-    circle(nose_x, nose_y, 40);
-   // image(img,nose_x,nose_y,40,40);
+    ////fill("red");
+  //  circle(nose_x, nose_y, 40);
+  var y = nose_y-10;
+    image(img,nose_x,nose_y,40,40);
+    image(hat,nose_x,y,60,60);
 }
 
 function got_poses(result) {
